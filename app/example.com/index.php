@@ -26,7 +26,7 @@ while ($blogpost = mysqli_fetch_array($blogposts))
         <?php
         $sqlGetPictures = $mysqli->query("SELECT * FROM pictures 
         WHERE blogpost_id = $blogpost[id]");
-        while($getPictures = mysqli_fetch_array($sqlGetPictures))
+       
         {
            // print_r($getPictures); 
         ?>
@@ -44,6 +44,7 @@ while ($blogpost = mysqli_fetch_array($blogposts))
         ?>
     </p>
     <a href="Post.php?id=<?php echo $blogpost['id']; ?>" > Read more </a>
+    <a href="editBlogPost.php?id=<?php echo $blogpost['id']; ?>" > edit </a>
     <?php
 }
 

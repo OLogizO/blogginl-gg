@@ -1,4 +1,5 @@
 <?php
+include("Includes/Partials/restriction.php");
 include("Includes/Partials/Header.php");
 require_once("Includes/DB.php");
 

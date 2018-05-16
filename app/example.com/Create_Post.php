@@ -1,11 +1,11 @@
 <?php
+include("Includes/Partials/restriction.php");
 include("Includes/Partials/Header.php");
 require_once("Includes/DB.php");
 
 if(isset($_POST['submit'])) {
     if(strlen($_POST['title']) > 1 && strlen($_POST['content']) > 1) {
-        list($width, $height) = getimagesize($_FILES["file"]["tmp_name"]);
-
+        
         if (getimagesize($_FILES["file"]["tmp_name"]) && $_FILES["file"]["size"] < 2000000)
         {
             $newFileName = time() . basename($_FILES["file"]["name"]);
